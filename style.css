@@ -1,3 +1,20 @@
-a {
-    color: black;
+button {
+    height: 50px;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.ranks {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-170px);
+}
+
+
+.link {
+    transform: translateY(-170px);
 }

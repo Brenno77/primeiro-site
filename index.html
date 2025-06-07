@@ -1,4 +1,11 @@
 <html>
+<head>
+    <style>
+
+
+    </style>
+</head>
+<link rel="stylesheet" href="style.css">
 
 <body>
     <h1>Primeiro Site</h1>
@@ -15,7 +22,7 @@
     </p>
 
     <img src="https://www.ahnegao.com.br/wp-content/uploads/2024/03/imgaleat-6ul-1.jpg" width="350px" height="150px">
-    <div style="display: flex;">
+    <div class="ranks">
         <div>
             <h1>Listas</h1>
             <ul>
@@ -31,27 +38,63 @@
             <ol>
                 <li>Bola</li>
                 <li>Carta</li>
-                <li>Pokemom</li>
+                <li>Pokemon</li>
                 <li>Scooby</li>
             </ol>
         </div>
     </div>
 
-    <h3>Links</h3>
-    
+
+    <div class="link">
+        <h3>Links</h3>
+
         <a href="https://www.youtube.com/" target="_blank" style="border: 1px; color: blueviolet;">
-        <button>
+            <button>
                 Clique aqui e veja!!!
-        </button>
+            </button>
         </a>
 
 
-    <br />
-    <br />
+        <br />
+        <br />
         <a href="https://www.wikipedia.org/" target="_blank">Segundo link </a>
-    <br />
-    <br />
+        <br />
+        <br />
+    </div>
 
+
+
+    <div class="game">
+
+        <script>
+
+            const jogada = [
+                '', '', '',
+                '', '', '',
+                '', '', ''
+                ]
+                
+            function fazerJogada (posicao) {
+                jogada [posicao] = "x";
+                desenhaBotoes();
+            }
+
+
+            function desenhaBotoes() {
+                const game = document.querySelector(".game")
+                game.innerHTML = "";
+                for (let i = 0; i < 9; i++) {
+                    game.innerHTML += `
+                    <button onclick="fazerJogada(${i})">
+                        ${jogada[i]}
+                    </button>`
+                }
+            }
+
+            desenhaBotoes();
+        </script>
+
+    </div>
 
 </body>
 
